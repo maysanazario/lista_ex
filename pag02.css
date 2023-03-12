@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+    background: #5b5b58;
+}
+
+ul {
+    position: relative;
+    transition-duration: 5s;
+    
+}
+
+ul li {
+    list-style: none;
+    text-align: center;
+    transition-duration: 5s;
+
+}
+
+ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 3em;
+    padding: 5px 20px;
+    display: inline-flex;
+    font-weight: 700;
+    transition: 0.5s;
+}
+
+ul:hover li a {
+    color: #0002;
+}
+
+ul li:hover a {
+    color: #000;
+    background: transparent;
+}
+
+ul li a:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5em;
+    color: rgba(0, 0, 0, 1);
+    border-radius: 50%;
+    z-index: -1;
+    opacity: 0;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 500px;
+    transition: letter-spacing 0.5s, left 0.5s;
+}
+
+ul li a:hover::before {
+    content: attr(data-text);
+    color: rgba(0, 0, 0, 0.263);
+    opacity: 5;
+    left: 50%;
+    letter-spacing: 10px;
+    width: 1800px;
+    height: 1800px;
+}
+
+ul li:nth-child(3n+1) a:before {
+    background-color: #4158d0;
+    background-image: linear-gradient(43deg, #e6e6e5 0%, #b4b4b1 46%, #9b9b97 100%);
+}
+
+ul li:nth-child(3n+2) a:before {
+    background-color: #9306E8;
+    background-image: linear-gradient(43deg, #e6e6e5 0%, #b4b4b1 46%, #9b9b97 100%);}
+
+ul li:nth-child(3n+3) a:before {
+    background-color: #DE0FDE;
+    background-image: linear-gradient(43deg, #e6e6e5 0%, #b4b4b1 46%, #9b9b97 100%);}
